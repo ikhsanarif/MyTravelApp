@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".activities.RegisterActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -31,41 +31,75 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inputName"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regNameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtSignup"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp" />
+                android:layout_below="@id/txtSignup"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp">
 
-            <EditText
-                android:id="@+id/inputEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/inputName"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp" />
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="user name" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/inputPassword"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regEmailLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/inputEmail"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:inputType="textPassword" />
+                android:layout_below="@id/regNameLayout"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regEmailLayout"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp">
+
+                <EditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/inputPassword"
+                android:layout_below="@id/regPasswordLayout"
                 android:layout_margin="20dp"
                 android:text="register"
+                android:textColor="@color/white"
                 app:cornerRadius="10dp" />
 
             <TextView

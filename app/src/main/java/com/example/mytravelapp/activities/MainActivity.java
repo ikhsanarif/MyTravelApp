@@ -1,4 +1,4 @@
-package com.example.mytravelapp;
+package com.example.mytravelapp.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.mytravelapp.R;
 import com.example.mytravelapp.fragments.HomeFragment;
 import com.example.mytravelapp.fragments.MapFragment;
 import com.example.mytravelapp.fragments.PhotosFragment;
 import com.example.mytravelapp.fragments.ProfileFragment;
-import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;

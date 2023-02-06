@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:elevation="20dp"
+    app:cardCornerRadius="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgPhotosPost"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/sepatu"
+                    android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/txtPhotosSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="ini text isinya comment foto"
+            android:layout_below="@+id/imgPhotosPost"/>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtNameHome"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_toRightOf="@id/imgHomePost"-->
+        <!--            android:text="nama orang"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:textSize="15sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtPost"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia, arcu in venenatis laoreet, lorem urna tincidunt elit, nec cursus felis massa ornare odio. Fusce id fringilla ex. Cras quis accumsan dui. Duis sit amet tortor ornare, tempus diam vitae, varius nisl. Maecenas gravida posuere euismod. Sed gravida velit sed quam eleifend sagittis. Vestibulum lacinia orci nec odio mattis ultricies. Sed pharetra condimentum sollicitudin. Maecenas eget accumsan nulla, varius vehicula sapien. Donec dictum hendrerit nulla ac sollicitudin. Pellentesque egestas eleifend mauris, ut commodo elit ultricies eu. Mauris rhoncus, ligula id tristique porta, velit metus tristique sem, ac mattis quam ex at sapien." />-->
+        <!--            android:layout_below="@id/txtNameHome"-->
+        <!--            android:layout_toRightOf="@id/imgHomePost"-->
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

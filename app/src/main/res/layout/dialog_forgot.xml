@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogForgot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/white_box">
+
+
+        <TextView
+            android:id="@+id/txtTitleForgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Forgot Password"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtEnterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your email address: "
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleForgot"
+            app:layout_constraintBottom_toTopOf="@id/txtInpEmail"/>
+
+        <EditText
+            android:id="@+id/txtInpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEnterEmail"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelForgot"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInpEmail"
+            app:layout_constraintBottom_toBottomOf="@id/dialogBox"
+            app:layout_constraintEnd_toStartOf="@+id/btnResetForgot"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResetForgot"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black"
+            android:text="reset"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/dialogBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnCancelForgot" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
